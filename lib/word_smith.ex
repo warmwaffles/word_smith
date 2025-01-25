@@ -17,6 +17,7 @@ defmodule WordSmith do
       iex> WordSmith.remove_accents("Ĥĕľŀö Ŵóŕƚƌ ©")
       "Hello World (C)"
   """
+  @spec remove_accents(String.t()) :: String.t()
   def remove_accents(string) when is_binary(string) do
     WordSmith.RemoveAccents.remove_accents(string)
   end
@@ -35,6 +36,7 @@ defmodule WordSmith do
       iex> WordSmith.squish("\\nHello \\t  World!\\n  ")
       "Hello World!"
   """
+  @spec squish(String.t()) :: String.t()
   def squish(string) when is_binary(string) do
     WordSmith.Squish.squish(string)
   end
